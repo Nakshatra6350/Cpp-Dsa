@@ -57,7 +57,6 @@ double preciseSol(int n, int precision, int tempSol){
 
 int main(){
 
-    // in this make sure the array is sorted only (monotonic order : either ASC or DESC) then it will work
 
     int n;
     cout << "Enter Number : ";

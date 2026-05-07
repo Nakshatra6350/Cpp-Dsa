@@ -64,7 +64,7 @@ void findMinPivot(int arr[], int n){
 
 int main(){
 
-    // in this make sure the array is sorted only (monotonic order : either ASC or DESC) then it will work
+     
 
     int n;
     cout << "Enter size of first array : ";

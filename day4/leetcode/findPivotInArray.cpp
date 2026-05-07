@@ -12,31 +12,52 @@ void printArray(int arr[], int n){
 
 }
 
-void peakIndex(int arr[], int n){
+
+void findMaxPivot(int arr[], int n){
 
 
     int start = 0;
     int end = n - 1;
 
-    int index = -1;
+    int ans = -1;
 
+    
+    while (start < end)
+    {
+        int mid = start + (end - start) / 2;
 
-    while(start < end){
-        int mid = start + (end - start) / 2; 
-
-        if(arr[mid]  < arr[mid + 1]){ // if this cond is true then it means that i have to seach in second line
+        if(arr[mid] >= arr[0]){ 
             start = mid + 1;
         }else{
             end = mid;
         }
-
     }
+    
+    cout << arr[start - 1] << " ";
+    
+    
+}
 
-    index = start;
+void findMinPivot(int arr[], int n){
 
 
-    cout << index;
+    int start = 0;
+    int end = n - 1;
 
+    int ans = -1;
+
+    while (start < end)
+    {
+        int mid = start + (end - start) / 2;
+
+        if(arr[mid] >= arr[0]){ // if this cond is true then it means that i have to seach in second line
+            start = mid + 1;
+        }else{
+            end = mid;
+        }
+    }
+    
+    cout << arr[start] << " ";
     
     
 }
@@ -56,7 +77,9 @@ int main(){
         cin >> arr[i];
     }
 
-    peakIndex(arr,n);
+    findMinPivot(arr,n);
+
+    findMaxPivot(arr,n);
 
     return 0;
 }

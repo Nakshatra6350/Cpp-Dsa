@@ -33,12 +33,45 @@ bool canSkip(char ch){
 
 void solve(string str, string part){
     
+
+    // bool found = true;
+    
+    // while (found) {
+    //     found = false;
+    //     for (int i = 0; i <= (int)str.length() - (int)part.length(); i++) {
+    //         bool isPartPresentWhole = true;
+            
+    //         // Check if part matches at position i
+    //         for (int j = 0; j < part.length(); j++) {
+    //             if (str[i + j] != part[j]) {
+    //                 isPartPresentWhole = false;
+    //                 break;
+    //             }
+    //         }
+            
+    //         // If full match found, erase it and restart
+    //         if (isPartPresentWhole) {
+    //             str.erase(i, part.length());
+    //             found = true;
+    //             break;
+    //         }
+    //     }
+    // }
+
+    // cout << str << " ";
+
+
+    while(str.length() != 0 && str.find(part) < str.length()){
+        str.erase(str.find(part), part.length());
+    }
+
+    cout << str;
 }
 
 int main(){
 
 
-    string str = "daabcaabcbc";
+    string str = "daabcbaabcbc";
     string part = "abc";
     solve(str, part);
 

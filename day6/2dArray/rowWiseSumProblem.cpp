@@ -1,0 +1,26 @@
+#include<iostream>
+#include<bits/stdc++.h>
+using namespace std;
+
+
+int main(){
+
+
+    int arr[3][3] = {{1,2,3}, {4,5,6}, {7,8,9}};
+    vector<int> ans;
+
+    for(int i = 0; i < 3; i++){
+        int count = 0;
+        for(int j = 0; j < 3; j++){
+            count+=arr[i][j];
+        }
+        ans.push_back(count);
+
+    }
+
+    for(auto val : ans){
+        cout << val << " ";
+    }
+
+    return 0;
+}

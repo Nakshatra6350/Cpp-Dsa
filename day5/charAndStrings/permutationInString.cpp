@@ -46,7 +46,7 @@ void solve(string str, string str2){
 
     for(int i = 0 ; i < str.length(); i++){
         char ch = str[i];
-        int num = num = ch - 'a';
+        int num = ch - 'a';
         count1[num]++;
     }
 

@@ -102,11 +102,18 @@ void solve(vector<char> ch){
         int count = j - i;
 
         if(count > 1){
+            //convert count into single digit and saving in answer
             string cnt = to_string(count);
-            
+            for(char x : cnt){
+                ch[ansIndex++] = x;
+            }
         }
 
+        i = j;
+
     }
+
+    cout << ansIndex;
 }
 
 int main(){
